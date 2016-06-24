@@ -1,0 +1,144 @@
+/* Stylesheet for a movie-rating website.
+   Author: Samuel Rosenfeld */
+
+b {
+    font-weight: normal;
+    font-style: italic;
+}
+
+#banner {
+    background-image: url("http://www.cs.washington.edu/education/courses/cse190m/12sp/homework/2/bannerbg.png");
+}
+
+#banner img {
+    display: block;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+}
+
+body {
+    background-image: url(http://www.cs.washington.edu/education/courses/cse190m/12sp/homework/2/background.png);
+    font-size: 8pt;
+    margin: 0;
+    padding: 0;
+}
+
+body, h1 { /* The h1 will inherit from the body, but the assignment specified them both separately, so I have included both tags incase someone wants to change one or the other in the future, without effecting the other one. */
+    font-family: "Verdana", "Tahoma", sans-serif;
+}
+
+body > div:last-child { /* W3C Validators */
+    bottom: 0;
+    opacity: 0.5;
+    position: fixed;
+    right: 0;
+    width: 100px;
+}
+
+.column {
+    float: left;
+    margin-left: 2%;
+    width: 47%;
+}
+
+#content {
+    border-color: gray;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    position: relative;
+    width: 800px;
+}
+
+
+dl {
+    font-family: "Arial", sans-serif;
+    font-size: 8pt;
+    margin: 10px;
+    position: relative;
+}
+
+dt {
+    font-weight: bold;
+    margin-top: 10pt;
+}
+
+#footer, #overview {
+    background-color: #A2B964;
+}
+
+#footer { 
+    clear: both;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    width: 800px;
+}
+
+h1 {
+    text-shadow: 3px 3px #999999;
+    font-size: 24pt;
+    font-weight: bold; /* This is the default. */
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+#overview {
+    float: right;
+    width: 250px;
+}
+
+#reviews {
+    overflow: hidden;
+    width: 550px;
+}
+
+#reviews div:first-child { /* Overall Score */
+    background-image: url("http://www.cs.washington.edu/education/courses/cse190m/12sp/homework/2/rbg.png");
+    color: red;
+    font-size: 48pt;
+    font-weight: bold;
+    height: 83px;
+}
+
+#reviews div:first-child img {
+    max-height: 100%;
+    vertical-align: text-bottom;
+}
+
+#reviews p:nth-of-type(even) { /* Signature */
+    margin-bottom: 20pt;
+    overflow: hidden;
+}
+
+#reviews p:nth-of-type(odd) { /* Actual Review */
+    background-color: #E8DC9B;
+    border-color: gray;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    font-weight: bold;
+    overflow: hidden;
+    padding: 8px;
+}
+
+#reviews p img:nth-of-type(odd) {
+    float: left;
+    width: 25px;
+    margin-right: 5px;
+}
+
+ul {
+   text-align: center;
+}
+

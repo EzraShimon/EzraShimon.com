@@ -1,0 +1,166 @@
+/* Author: Ezra-Shimon Rosenfeld */
+
+#about, #contact {
+    overflow: hidden;
+}
+
+#about img, #contact img {
+    float: right;
+    height: auto;
+    margin-left: 1em;
+    width: 50%;
+}
+
+#banner {
+    background-color: lime;
+    color: darkblue;
+    text-align: center;
+}
+
+#banner h1 {
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#banner .selected {
+    color: blueviolet;
+}
+
+body, div#resume > :last-child {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+code {
+    font-style: italic;
+}
+
+#contact dd {
+    font-size: 16pt;
+}
+
+#contact dl {
+    margin-left: 10%;
+}
+
+#contact dt {
+    font-size: 18pt;
+    font-weight: bold;
+    margin: 1em;
+    margin-bottom: 0em;
+}
+
+em {
+    font-style: normal;
+    font-weight: bold;
+}
+
+#footer {
+    clear: both;
+    text-align: center;
+}
+
+#footer img {
+    height: 64px;
+    margin: 1em;
+    width: 64px;
+}
+
+div:not(.show) {
+    display: none;
+}
+
+p {
+    font-size: 13pt;
+    margin: 1em;
+}
+
+#resume {
+    margin: 0.5in;
+    font-family: "Times New Roman", Times, serif;
+}
+
+#resume dd {
+    margin-bottom: 1em;
+}
+
+#resume dl {
+    margin-top: 0;
+}
+
+#resume dl ul {
+    list-style-type: disc;
+}
+
+#resume dt:last-of-type {
+    margin-top: 1em;
+}
+
+#resume dt, #resume h2, #resume li {
+    font-size: 12pt;
+}
+
+#resume dt em:last-of-type {
+    display: block;
+}
+
+#resume h1 {
+    font-size: 16pt;
+}
+
+#resume h1, #resume ul {
+    margin: 0;
+}
+
+#resume h1, #resume > ul:first-of-type {
+    text-align: center;
+}
+
+#resume h2 {
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+#resume ul {
+    list-style-type: none;
+}
+
+#resume > ul:first-of-type {
+    padding: 0;
+}
+
+#resume > ul:first-of-type li {
+    font-size: 10pt;
+}
+
+#resume h2:after {
+    content: ":";
+}
+
+#resume > ul:first-of-type li:last-of-type:before {
+    content: "  \2022  ";
+}
+
+#resume > ul:first-of-type li:not(:first-of-type) {
+    display: inline-block;
+}
+
+#projects {
+    margin: 1em;
+}
+
+#projects li {
+    display: inline-block;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+#projects ul {
+    text-align: center;
+}
+
