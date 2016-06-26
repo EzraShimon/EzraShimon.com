@@ -1,0 +1,27 @@
+/*
+	Style Sheet for Baby Names Trivia Database Website
+	Ezra-Shimon (Samuel) Rosenfeld
+*/
+
+body {
+	font-family: Georgia, serif;
+	font-size: 12pt;
+}
+
+q {
+	font-style: italic;
+}
+
+.rankingBarDiv {
+	background-color: #FFBBBB;
+	text-align: center;
+	width: 50px;
+}
+
+.rankingBarCell {
+	vertical-align: bottom;
+}
+
+#rankingBars {
+	height: 250px;
+}

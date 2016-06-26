@@ -3,7 +3,7 @@
     Ezra-Shimon (Samuel) Rosenfeld
 */
 /*jslint browser: true*/
-/*global $, jQuery, alert*/
+/*global $*/
 
 $(function () {
     "use strict";
@@ -34,4 +34,6 @@ $(function () {
     });
     
     $("#banner h1:first-child").click();
+    
+    $("a").attr("target", "_blank");
 });
