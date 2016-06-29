@@ -36,35 +36,39 @@
 
             <h1>Web Programming & Development Class</h1>
 
-            <p>descriptive paragraph</p>
+            <p>Last year, in college, I took a web development course.  I learned good habits such as separating content (HTML) and style (CSS), and I can pretty much use CSS to cause a website to have whatever static appearance I want.  Check out <a href="projects/movie/movie.php?film=tmnt">Rancid Tomatoes</a>, a movie rating website I made, to see an example of a how I can use CSS to completely change a page's appearance.  For the assignment, I was given an image of what the final result was supposed to look like and told to make it.  <a href="projects/movie/movie.php?film=tmnt">Rancid Tomatoes</a> uses PHP to read movie rating information from files and output information about whichever movie is selected in the proper format.</p>
+            
+            <p>Another website I created for this class, <a href="/projects/nerdluv/index.php">nerdLuv</a>, is a dating website that uses HTML forms for users to create accounts, writes the information for user's accounts into local files, and uses a compatability algorithm to tell each user about potential matches.  In creating the <a href="/projects/bacon/index.php">One Degree of Kevin Bacon</a>, I learned how to use SQL with PHP.  I also got a lot more experience using SQL in my Database Management course last year, in which I learned how to design and normalize databases in addition to writing queries.  I also learned JavaScript and JQuery and created <a href="projects/fifteen/fifteen.html">The Fifteen Puzzle</a>, a game written entirely in JavaScript.  And I learned AJAX and made a website that provides information about <a href="projects/names/names.html">Baby Names</a>.</p>
             
             <ul>
-                <li><a href="projects/movie/movie.php?film=tmnt">Movie Rating Website</a></li>
-                <li><a href="/projects/nerdluv/index.php">Dating Website</a></li>
+                <li><a href="projects/movie/movie.php?film=tmnt">Rancid Tomatoes</a></li>
+                <li><a href="projects/nerdluv/index.php">nerdLuv</a></li>
                 <li><a href="projects/bacon/index.php">One Degree of Kevin Bacon</a></li>
                 <li><a href="projects/fifteen/fifteen.html">Fifteen Puzzle</a></li>
                 <li><a href="projects/names/names.html">Baby Names</a></li>
             </ul>
-        
+            
+            <hr/>
+            
+            <h1>Summer Internship at Textron Systems</h1>
+            
+            <img src="ELEC_OneSystem_UGCS_Interior_lg.jpg" alt="Two U.S. Soldiers Operating a Ground Control System"/>
+            
+            <p>Last summer, I had a software engineering internship at Textron Systems in Hunt Valley, Maryland.  My work focused on a Ground Control System similar to the one pictured to the right. There's a 60-page order of instructions that a technician has to through in order to install the software on a Ground Control System.  It generally takes about three days for field technicians to install the software, and my internship consisted mostly of writing shell scripts in Bash and PowerShell to automate the installation and setup of Ground Control Systems.  I also used PowerCLI, a PowerShell API for interacting with VMware virtual machines. The scripts that I wrote cut out a few hours of a technician having to carefully copy commands from a piece of paper into a computer.  One of the commands involved deleting all the files in a directory, and I'm told that some poor technician once accidentally hit enter after only typing in <code>rm -rf /</code>.  Luckily, this happened during testing in Hunt Valley, not out in the field, and now, because of my script, it won't ever happen again.</p>
+            
+            <p>I didn't know anything at all about shell scripting before I started my internship, and I am very fortunate that Textron made me comfortable with Linux.  I learned how to use important tools like <code>grep</code> and <code>sed</code> and even <code>vi</code>.  I also learned a lot about what's involved with real-world work, such as what documentation actually is, the review process for code, and what it's like to test code on something more complicated than a personal computer.  And I found it really meaningful to get to do work that I knew was directly making things easier for our brothers and sisters over seas.  I had a coworker, a fellow software engineer, who worked for Textron as a field technician in Afghanistan for 6 months, and hearing his stories was invaluable.</p>
+            
             <hr/>
             
             <h1>EzraShimon.com</h1>
             
-            <p>descriptive paragraph</p>
+            <p>Creating this website was a completely different experience from doing any of my homework assignments.  The first step was designing it, figuring out what I wanted my website to look like.  I first browsed a few other personal websites to get an idea of what sorts of things have worked for other people, and then I sat down with a pencil and paper to draw out what I wanted my website to look like.  The four pages that are linked to by the above navigation bar were not so difficult to create.  For the resume section, I completely separated content from style.  It would have been easy to cheat and just add colons to the end of the headings, or add a dot in the right place in my HTML, but those characters are there for style, not content, so they are in my CSS instead.</p>
             
-            <hr/>
+            <p>But the hard part was moving all of the projects that I did in my web development class from my professor's server to my server.  For one, my professor's server is no longer up.  My projects relied on a lot of resources on my professor's server, such as images, a database, and a PHP API.  I was able to get most of these resources from the University of Washington, where my web development curriculum came from.  But there were a few things that I had to fill in myself.  It was impossible for me to make requests on University of Washington's database because I did not have an account to login with, so I had to recreate the database on my own server.  That also meant setting up MySQL on my own server, causing my website to use the full LAMP stack.  I found a script to install the database, although it was missing a few lines of code to create the database that I had to fill in.  I also had to figure out how to create users, but it turns out that that's pretty simple, although I'm not guaranteeing the security of my database.  But you will find that the password for logging into the database which was initially hardcoded into my PHP script is now stored in a file that is in my .gitignore, and if you do figure out the password, you'll probably find that you are only able to make <code>SELECT</code> queries.</p>
             
-            <h1>Software Engineering Internship at Textron Systems in Hunt Valley, Maryland</h1>
             
-            <img src="FILL ME IN" alt="FILL ME IN"/>
-            
-            <p>descriptive paragraph</p>
-            
-            <hr/>
-            
-            <h1>לימוד תורה</h1>
-            
-            <p>descriptive paragraph</p>
+            <p>I thought I had done all of the hard work after I got the database up and running, but my last project used a PHP API, and I was unable to access University of Washington's API using AJAX because 
+            my JavaScript file and the PHP API were located in two different domains.  It turned out that the solution was to create a proxy server on my end, which accepts the same requests as University of Washington's server, and produces the same output.  This was trivial for most of what the API does, but part of the API makes a request to the database and outputs JSON, and University of Washington's API no longer had permission to access their database.  So I had to write that query myself and format the results into the required JSON.  Creating this website was not an intimidating task because I already had experience with all of the technologies it uses.  But it was my first time configuring a server, and a database, and I can now make a complete website from scratch.</p>
         </div>
 
         <div id="resume">

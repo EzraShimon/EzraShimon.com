@@ -24,8 +24,8 @@ $(function () {
         $("#errors").append($("<p>", {"text": data.status + ": " + data.statusText}));
     }
     
-    var babyNamesFile = "https://webster.cs.washington.edu/cse154/babynames.php";
-    //Populate the list of baby names.
+    var babyNamesFile = "babynames.php";
+    //Populate the list of baby names. 
     $.get(babyNamesFile, {"type": "list"})
         .done(function (data) {
             $("#allnames").removeAttr("disabled");
@@ -95,11 +95,11 @@ $(function () {
                 });
 
             //List famours actors with this name.
-            $.getJSON(babyNamesFile, {"type": "celebs", "name": selectedName, "gender": gender})
+             $.getJSON(babyNamesFile, {"type": "celebs", "name": selectedName, "gender": gender})
                 .done(function (data) {
                     $("#celebs").append("<ul>");
                     $.each(data.actors, function (idx, e) {
-                        $("#celebs ul").append($("<li>", {"text": e.firstname + " " + e.lastname + " (" + e.filmcount + ")"}));
+                        $("#celebs ul").append($("<li>", {"text": e.firstname + " " + e.lastname/* + " (" + e.filmcount + ")"*/}));
                     });
                 })
                 .fail(function (data) {

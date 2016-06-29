@@ -4,7 +4,7 @@
     overflow: hidden;
 }
 
-#about img, #contact img {
+#about img, #contact img, #projects img {
     float: right;
     height: auto;
     margin-left: 1em;
@@ -75,9 +75,19 @@ div:not(.show) {
     display: none;
 }
 
+hr {
+    clear: both;
+}
+
 p {
     font-size: 13pt;
     margin: 1em;
+}
+
+#projects img {
+    float: right;
+    margin: 1em;
+    width: 40%;
 }
 
 #resume {
