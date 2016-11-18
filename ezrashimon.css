@@ -95,7 +95,8 @@ p {
     font-family: "Times New Roman", Times, serif;
 }
 
-#resume dd {
+/* Second selector needs to be changed to be less specific. */
+#resume dd, #resume dl:last-of-type dt:first-of-type {
     margin-bottom: 1em;
 }
 
